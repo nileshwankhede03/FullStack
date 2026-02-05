@@ -1,0 +1,165 @@
+:root {
+  --bg: #0f0f12;
+  --panel: #1b1b22;
+  --card: #23232c;
+  --border: #2f2f3a;
+  --primary: #6c63ff;
+  --danger: #ff4d4d;
+  --text: #f5f5f5;
+  --muted: #b9b9c5;
+}
+
+/* -------- RESET -------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* -------- FORM -------- */
+
+.note-create-form {
+  max-width: 600px;
+  margin: 40px auto 30px;
+  padding: 20px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  display: flex;
+  gap: 12px;
+}
+
+.note-create-form input {
+  flex: 1;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.note-create-form input:focus {
+  border-color: var(--primary);
+}
+
+.note-create-form button {
+  padding: 12px 18px;
+  border-radius: 8px;
+  border: none;
+  background: var(--primary);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.note-create-form button:hover {
+  opacity: 0.9;
+}
+
+/* -------- NOTES GRID -------- */
+
+.notes {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+/* -------- NOTE CARD -------- */
+
+.note {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px;
+  transition: 0.2s ease;
+}
+
+.note:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary);
+}
+
+.note h1 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.note p {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+/* -------- ACTION BUTTON -------- */
+
+.note button {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  background: var(--danger);
+  color: white;
+  font-size: 13px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+
+/* ---- ACTIONS ROW ---- */
+
+.note-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+/* ---- EDIT BUTTON ---- */
+
+.edit-btn {
+  flex: 1;
+  padding: 8px 0;
+  border-radius: 6px;
+  border: 1px solid var(--primary);
+  background: transparent;
+  color: var(--primary);
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.edit-btn:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* ---- DELETE BUTTON ---- */
+
+.delete-btn {
+  flex: 1;
+  padding: 8px 0;
+  border-radius: 6px;
+  border: none;
+  background: var(--danger);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.delete-btn:hover {
+  opacity: 0.9;
+}
